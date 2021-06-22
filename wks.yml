@@ -1,6 +1,6 @@
 deps:
-  - rhoban/regression_forests
-  - rhoban/bbo
-  - rhobandeps/tiny-dnn
-  - rhoban/viewer
+  - rhoban/regression_forests#wks
+  - rhoban/bbo#wks
+  - rhobandeps/tiny-dnn#wks
+  - rhoban/viewer#wks
 
