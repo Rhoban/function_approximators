@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.16.3)
 project(rhoban_fa)
 
 # Build options
@@ -6,10 +6,6 @@ option(RHOBAN_FA_BUILD_EXAMPLES "Build code examples" OFF)
 option(RHOBAN_FA_BUILD_VIEWER "Build FA Viewer (require SFML)" OFF)
 option(RHOBAN_FA_USES_DNN "Are deep neural networks available as function approximators (Strongly increases compilation time)" OFF)
 option(RHOBAN_FA_USES_GP "Are gaussian processes used as function approximators" OFF)
-
-
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -std=c++17")
 
 ## Gaussian Processes support
 # Currently, uses of GP in FA is directly linked with the use of GP in
