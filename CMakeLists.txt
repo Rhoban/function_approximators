@@ -60,18 +60,7 @@ endif(RHOBAN_FA_BUILD_VIEWER)
 if (RHOBAN_FA_USES_DNN)
   target_link_libraries(rhoban_fa PUBLIC tiny-dnn)
   add_definitions(-DRHOBAN_FA_USES_DNN)
-  # Use SSE2 and AVX if provided, otherwise, show a warning
-  if ("${CMAKE_CXX_FLAGS}" MATCHES "-msse2" AND
-      "${CMAKE_CXX_FLAGS}" MATCHES "-mavx")
-    # Enable SSE2 optimizations
-    add_definitions(-DCNN_USE_SSE)
-    # Enable Advanced Vector Extensions
-    add_definitions(-DCNN_USE_AVX)
-  else()
-    message(WARNING "missing flags for SSE2 and AVX! DNN will be really slow")
-  endif()
 endif (RHOBAN_FA_USES_DNN)
-
 
 if (RHOBAN_FA_BUILD_EXAMPLES)
   add_executable(test_fa_io src/test_io.cpp)
